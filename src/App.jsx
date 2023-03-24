@@ -7,6 +7,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Footer from "./Components/Footer";
 import Teachers from "./Pages/Teachers";
+import Profile from "./Pages/Profile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/teachers" element={<Teachers />} />
+        <Route path="/userProfile" element={<Profile />}/>
       </Routes>
       <Footer />
     </>

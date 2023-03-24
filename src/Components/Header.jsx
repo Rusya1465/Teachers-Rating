@@ -7,42 +7,44 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
   };
 
   return (
-    <header className="header">
-      <div className="logo">
-        <img src={logo} alt="Logo" />
-      </div>
-      <div className="site-title">
-        <h1>TeachingRate</h1>
-      </div>
-      <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
-        <ul>
-          <li>
-            <a href="/">Главная</a>
-          </li>
-          <li>
-            <a href="/about">О нас</a>
-          </li>
-          <li>
-            <a href="/contact">Контакты</a>
-          </li>
-          <li>
-            <Link to="/teachers">Учителя</Link>
-          </li>
-        </ul>
-      </nav>
-      <div
-        className={`burger ${isMenuOpen ? "open" : ""}`}
-        onClick={toggleMenu}
-      >
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
-    </header>
+    <>
+      <header className="header">
+        <div className="logo">
+          <img src={logo} alt="Logo" />
+        </div>
+        <div className="site-title">
+          <h1>TeachingRate</h1>
+        </div>
+
+        <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+          <ul>
+            <li>
+              <Link to={'/'}>Главная</Link>
+            </li>
+            <li>
+              <a href="/about">О нас</a>
+            </li>
+            <li>
+              <Link to="/teachers">Учителя</Link>
+            </li>
+            <li>
+              <Link to={'/userProfile'}>Профиль</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <div onClick={toggleMenu} className={isMenuOpen ? 'menu-btn open' : 'menu-btn'}>
+          <div className="menu-btn__burger">
+
+          </div>
+        </div>
+      </header>
+
+    </>
   );
 }
 
