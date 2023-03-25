@@ -26,9 +26,6 @@ function Header() {
               <Link to={'/'}>Главная</Link>
             </li>
             <li>
-              <a href="/about">О нас</a>
-            </li>
-            <li>
               <Link to="/teachers">Учителя</Link>
             </li>
             <li>

@@ -8,9 +8,9 @@ import HomePage from "./Pages/HomePage";
 import Footer from "./Components/Footer";
 import Teachers from "./Pages/Teachers";
 import Profile from "./Pages/Profile";
+import Teacher from "./Pages/Teacher";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -19,6 +19,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/teachers" element={<Teachers />} />
         <Route path="/userProfile" element={<Profile />}/>
+        <Route path="/teacher/:id" element={<Teacher/>}/>
       </Routes>
       <Footer />
     </>
