@@ -10,6 +10,7 @@
 
 .card__photo {
   display: block;
+  /* height: 200px; */
   height: auto;
   max-width: 100%;
   object-fit: cover;
@@ -29,4 +30,9 @@
   display: flex;
   font-size: 1.2rem;
   margin-top: 8px;
+}
+
+.teachersList-wrapper {
+  width: 100%;
+  padding: 90px;
 }

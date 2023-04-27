@@ -14,7 +14,7 @@ const teachers = [
       id:2,
       name:'Nurmuhammet Abdyllaev',
       photoUrl: photo_4,
-      rating: 5
+      rating: 1
     },
     {
       id:3,

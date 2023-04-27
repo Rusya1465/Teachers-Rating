@@ -23,7 +23,7 @@ const Teachers = () => {
   // };
 
   return (
-    <div>
+    <div className="teachersList-wrapper">
       {/* <TextField
         label="Search"
         value={searchText}
