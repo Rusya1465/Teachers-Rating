@@ -7,6 +7,10 @@
   padding: 2rem;
   font-size: 1.2rem;
   text-align: center;
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; */
 }
 
 .footer div {
@@ -44,5 +48,6 @@
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
+    position: relative;
   }
 }

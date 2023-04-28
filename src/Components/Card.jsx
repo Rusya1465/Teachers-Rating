@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "../styles/Card.css";
 
 const Card = (props) => {
   const starRating = [...Array(5)].map((_, i) => (
@@ -13,7 +14,6 @@ const Card = (props) => {
       <img
         src={props.photoUrl}
         className="card__photo"
-        height='200px'
       />
       <div className="card__content">
         <Link to={`/teacher/${props.id}`}>
