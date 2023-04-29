@@ -34,10 +34,22 @@
     align-items: center;
     justify-content: space-between;
     min-height: 220px;
+    min-width: 330px;
 }
 
 .welcomeBack--con-heading {
     margin-top: 1rem;
     text-align: center;
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 415px) {
+    .welcomeBack--con-heading {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 330px) {
+    .welcomeBack--con-heading {
+        font-size: 1.1rem;
+    }
 }

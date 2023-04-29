@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Profile.css'
 import { useState } from 'react'
+import { BiLogOut } from "react-icons/bi";
 
 function Profile() {
 
@@ -12,7 +13,10 @@ function Profile() {
 
     return (
         <div className="profile--wrapper">
-            <h2>Hello, &#123;username&#125;</h2>
+            <div className="profile--title-wrapper">
+                <h2>Hello, &#123;username&#125;</h2>
+                <button className="profile--sign-out" onClick={() => console.log('clicked')}><BiLogOut style={{marginRight: '5px'}}/><span className='profile--sign-out-span'>Sign Out</span></button>
+            </div>
             <div className="profile--tabs-wrapper">
                 <div className="profile--tabs">
                     <div onClick={() => toggleTab(1)} className={toggleState === 1 ? "profile--tab active-tab" : "profile--tab"}>Profile</div>

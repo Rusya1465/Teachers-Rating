@@ -6,6 +6,8 @@ import Footer from "./Components/Footer";
 import Teachers from "./Pages/Teachers";
 import Profile from "./Pages/Profile";
 import Teacher from "./Pages/Teacher";
+import SignIn from "./Components/auth/SignIn";
+import SignUp from "./Components/auth/SignUp";
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/teachers" element={<Teachers />} />
-        <Route path="/userProfile" element={<Profile />}/>
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/userProfile" element={<Profile/>}/>
         <Route path="/teacher/:id" element={<Teacher/>}/>
       </Routes>
       <Footer />

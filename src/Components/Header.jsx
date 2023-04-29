@@ -31,6 +31,9 @@ function Header() {
             <li>
               <Link to={'/userProfile'}>Профиль</Link>
             </li>
+            <li>
+              <Link to={'/signIn'}>Профиль</Link>
+            </li>
           </ul>
         </nav>
 
