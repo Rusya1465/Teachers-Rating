@@ -4,7 +4,7 @@ import { AiOutlineExclamationCircle } from 'react-icons/ai';
 import { auth } from "../../firebase"
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
-import { ReactDOM } from "react";
+
 function SignIn() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -23,19 +23,20 @@ function SignIn() {
   }
 
   React.useEffect(() => {
-    const h3 = document.getElementsByClassName('logIn--error')[0];
-    // setTimeout(() => {
-    //     const h3 = document.getElementsByClassName('.logIn--error')[0];
-    //     console.log(h3)
-    //   }, 1000);
-    console.log(h3)
-  }, [])
+    setTimeout(() => {
+        let elementExists = document.getElementById('errorMsg');
+        if (elementExists) {
+          const h3 = document.getElementById('errorMsg');
+          h3.style.display = "none";
+        }
+      }, 3000);
+  }, [userNotFound])
 
   return (
     <div className="profile--wrapper">
       <form action="" className="form" onSubmit={signIn}>
         <h1 className="logIn--title">Log In</h1>
-        {userNotFound && <h3 className="logIn--error"><AiOutlineExclamationCircle/> User not found</h3>}
+        {userNotFound && <h3 className="logIn--error" id="errorMsg"><AiOutlineExclamationCircle/> Email not found</h3>}
         <input
           className="logIn--email"
           type="email"
