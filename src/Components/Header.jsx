@@ -28,8 +28,11 @@ function Header() {
             <li>
               <Link to="/teachers">Учителя</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to={'/userProfile'}>Профиль</Link>
+            </li> */}
+            <li>
+              <Link to={'/signIn'}>Профиль</Link>
             </li>
           </ul>
         </nav>

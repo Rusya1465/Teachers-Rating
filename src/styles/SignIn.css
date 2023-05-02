@@ -1,0 +1,44 @@
+.logIn--title {
+    margin-bottom: 1rem;
+}
+.form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.form input {
+    padding: 12px;
+    font-size: 15px;
+    margin: 0 0 15px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form button {
+    padding: 12px;
+    font-size: 15px;
+    background: #007bff;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form button:hover {
+    background: #016ada;
+}
+
+.haveAccount {
+    margin-top: .8rem;
+}
+
+.logIn--error {
+    color: rgb(216, 5, 5);
+    font-weight: 400;
+}
