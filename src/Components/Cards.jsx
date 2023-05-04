@@ -5,7 +5,7 @@ import teachers from "../../teachers";
 
 const Cards = () => {
   const [page, setPage] = useState(1);
-  const cardsPerPage = 5;
+  const cardsPerPage = 8;
   
   
   const totalPages = Math.ceil(teachers.length / cardsPerPage);
