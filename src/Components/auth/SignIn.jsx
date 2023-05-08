@@ -27,6 +27,10 @@ function SignIn() {
             break;
           case "auth/wrong-password":
             setUserWrongPassword(prevState => !prevState)
+            break;
+          default:
+            console.log("Unexpected Error")
+            break;
         }
         // if (errorCode == "auth/user-not-found") {
         //     setUserNotFound(prevState => !prevState)
