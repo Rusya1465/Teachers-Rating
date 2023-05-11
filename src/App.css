@@ -1,0 +1,17 @@
+input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.content {
+  min-height: calc(100vh - 40px);
+}

@@ -1,26 +1,21 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/Card.css";
+import RatingSystem from "./RatingSystem";
 
 const Card = (props) => {
-  const starRating = [...Array(5)].map((_, i) => (
-    <FaStar key={i} color={i < props.rating ? "#ffc107" : "#e4e5e9"} />
-  ));
-
   return (
     <div className="card" id={props.id}>
-      <img
-        src={props.photoUrl}
-        className="card__photo"
-      />
+      <img src={props.photoUrl} className="card__photo" />
       <div className="card__content">
         <Link to={`/teacher/${props.id}`}>
           <h2 className="card__name">{props.name}</h2>
         </Link>
 
-        <div className="card__rating">{starRating}</div>
+        <div className="card__rating">
+          <RatingSystem />
+        </div>
       </div>
     </div>
   );
