@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { TeachersContext } from "../Context/TeachersContext";
 import "../styles/Teacher.css";
+// import CommentForm from "../Components/CommentsForm";
 
 function Teacher() {
   const { id } = useParams();
@@ -30,6 +31,7 @@ function Teacher() {
           <span className="teacher__rating-value">{teacher.rating}</span>
         </div>
       </div>
+      {/* <CommentForm/> */}
     </div>
   );
 }

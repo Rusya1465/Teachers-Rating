@@ -20,7 +20,7 @@ function Header() {
           <h1>TeachingRate</h1>
         </div>
 
-        <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+        <nav className={`nav ${isMenuOpen ? "open" : ""}`} id="nav_header">
           <ul>
             <li>
               <Link to={'/'}>Главная</Link>

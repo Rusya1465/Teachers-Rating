@@ -7,7 +7,7 @@ function RatingSystem(props) {
   const [hover, setHover] = useState(null);
   const { teachers, updateTeacherRating } = useContext(TeachersContext);
   const handleRatingChange = (event) => {
-    const teacherId = props.teacherId;
+    const teacherId = props.id;
     const newRating = parseInt(event.target.value);
     setRating(newRating);
     updateTeacherRating(teacherId, newRating);
