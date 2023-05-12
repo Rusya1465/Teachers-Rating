@@ -21,11 +21,5 @@ const Card = (props) => {
   );
 };
 
-// Card.propTypes = {
-//   id: PropTypes.number.isRequired,
-//   name: PropTypes.string.isRequired,
-//   photoUrl: PropTypes.string.isRequired,
-//   rating: PropTypes.number.isRequired,
-// };
 
 export default Card;

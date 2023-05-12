@@ -8,6 +8,7 @@ import Profile from "./Pages/Profile";
 import Teacher from "./Pages/Teacher";
 import SignIn from "./Components/auth/SignIn";
 import SignUp from "./Components/auth/SignUp";
+import { TeachersContextProvider } from "./Context/TeachersContext";
 
 function App() {
   return (
