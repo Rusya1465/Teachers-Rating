@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Grid, Pagination } from "@mui/material";
 import Card from "./Card";
-import teachers from "../../teachers";
+import { TeachersContext } from "../Context/TeachersContext";
+import "../styles/Cards.css";
 
 const Cards = () => {
+  const useTeachers = () => {
+    const { teachersList, updateTeacherRating } = useContext(TeachersContext);
+    return { teachers: teachersList, updateTeacherRating };
+  };
   const [page, setPage] = useState(1);
-  const cardsPerPage = 8;
-  
-  
-  const totalPages = Math.ceil(teachers.length / cardsPerPage);
+  const cardsPerPage = 4;
+  const { teachers, updateTeacherRating } = useTeachers();
+
   const handleChangePage = (event, value) => {
     setPage(value);
   };
@@ -22,11 +26,26 @@ const Cards = () => {
       <Grid container spacing={3}>
         {cardsToShow.map((teacher) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={teacher.id}>
-            <Card id={teacher.id} photoUrl={teacher.photoUrl} name={teacher.name} rating={teacher.rating}/>
+            <Card
+              id={teacher.id}
+              photoUrl={teacher.photoUrl}
+              name={teacher.name}
+              rating={teacher.rating}
+              updateRating={updateTeacherRating}
+            />
           </Grid>
         ))}
       </Grid>
-      {/* <Pagination count={totalPages} page={page} onChange={handleChangePage} /> */}
+      <Pagination
+        count={Math.ceil(teachers.length / cardsPerPage)}
+        page={page}
+        onChange={handleChangePage}
+        color="primary"
+        size="large"
+        showFirstButton
+        showLastButton
+        className="pagination"
+      />
     </div>
   );
 };

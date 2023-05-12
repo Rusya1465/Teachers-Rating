@@ -8,22 +8,27 @@ import Profile from "./Pages/Profile";
 import Teacher from "./Pages/Teacher";
 import SignIn from "./Components/auth/SignIn";
 import SignUp from "./Components/auth/SignUp";
+import { TeachersContextProvider } from "./Context/TeachersContext";
 
 function App() {
-
   return (
-    <>
+    <div class="container">
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/teachers" element={<Teachers />} />
-        <Route path="/signIn" element={<SignIn />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/userProfile" element={<Profile/>}/>
-        <Route path="/teacher/:id" element={<Teacher/>}/>
-      </Routes>
+      <div className="content">
+        <TeachersContextProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/teachers" element={<Teachers />} />
+            <Route path="/signIn" element={<SignIn />} />
+            <Route path="/signUp" element={<SignUp />} />
+            <Route path="/userProfile" element={<Profile />} />
+            <Route path="/teacher/:id" element={<Teacher />} />
+          </Routes>
+        </TeachersContextProvider>
+      </div>
+
       <Footer />
-    </>
+    </div>
   );
 }
 

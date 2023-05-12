@@ -1,55 +1,88 @@
 .main {
-    width: 100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../assets/main-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 90px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
+  height: 80vh;
 }
 .welcomeBack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10rem;
 }
 
 .main--heading {
-    color: aliceblue;
+  color: aliceblue;
+  font-size: 7em;
+  border-right: 4px solid #000;
+  animation: cursor 1s infinite step-end, typing 15s infinite steps(16);
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 16ch;
+  }
+  80% {
+    width: 16ch;
+  }
+  90% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
 }
 
-.welcomeBack--heading{
-    margin: 3rem 0;
+.welcomeBack--heading {
+  margin: 3rem 0;
 }
 
 .welcomeBack--images-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcomeBack--con {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 220px;
-    min-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 220px;
+  min-width: 330px;
 }
 
 .welcomeBack--con-heading {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 415px) {
-    .welcomeBack--con-heading {
-        font-size: 1.2rem;
-    }
+  .welcomeBack--con-heading {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 330px) {
-    .welcomeBack--con-heading {
-        font-size: 1.1rem;
-    }
+  .welcomeBack--con-heading {
+    font-size: 1.1rem;
+  }
 }
