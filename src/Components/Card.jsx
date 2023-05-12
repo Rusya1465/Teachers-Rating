@@ -14,7 +14,7 @@ const Card = (props) => {
         </Link>
 
         <div className="card__rating">
-          <RatingSystem />
+          <RatingSystem id={props.id} />
         </div>
       </div>
     </div>
