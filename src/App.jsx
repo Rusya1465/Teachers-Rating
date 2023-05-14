@@ -12,7 +12,7 @@ import SignUp from "./Components/auth/SignUp";
 function App() {
 
   return (
-    <>
+    <div className="container">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -23,7 +23,7 @@ function App() {
         <Route path="/teacher/:id" element={<Teacher/>}/>
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

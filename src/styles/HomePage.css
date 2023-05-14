@@ -13,7 +13,38 @@
 }
 
 .main--heading {
-    color: aliceblue;
+  color: aliceblue;
+  font-size: 7em;
+  border-right: 4px solid #000;
+  animation: cursor 1s infinite step-end, typing 15s infinite steps(16);
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  30% {
+    width: 16ch;
+  }
+  80% {
+    width: 16ch;
+  }
+  90% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
 }
 
 .welcomeBack--heading{
