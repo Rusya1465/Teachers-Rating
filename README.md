@@ -1,2 +1,1 @@
-# Rustam govno
-
+# RUSTAM GOVNO
