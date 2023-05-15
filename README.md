@@ -1,2 +1,2 @@
-# Teachers-Rating
-Rustam govno
+# Rustam govno
+
