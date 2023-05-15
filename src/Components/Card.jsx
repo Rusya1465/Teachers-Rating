@@ -7,7 +7,11 @@ import RatingSystem from "./RatingSystem";
 const Card = (props) => {
   return (
     <div className="card" id={props.id}>
-      <img src={props.photoUrl} className="card__photo" />
+      <div className="card__dark-bg">
+        <div className="card__image-container">
+          <img src={props.photoUrl} className="card__photo" alt="teacher image"/>
+        </div>
+      </div>
       <div className="card__content">
         <Link to={`/teacher/${props.id}`}>
           <h2 className="card__name">{props.name}</h2>

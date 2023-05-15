@@ -5,7 +5,7 @@ import photo_3 from "../assets/teachers/irshad.jpeg";
 import photo_4 from "../assets/teachers/nurmuhammed.jpeg";
 import photo_5 from "../assets/teachers/artur.jpeg";
 import photo_6 from "../assets/teachers/ruslan.jpeg";
-import photo_7 from "../assets/teachers/nazima.jpeg";
+import photo_7 from "../assets/teachers/emilbek.jpeg";
 import photo_8 from "../assets/teachers/murray.jpeg";
 
 let initialTeachers = [
@@ -25,7 +25,7 @@ export const TeachersContextProvider = ({ children }) => {
   },
   {
     id: 2,
-    name: "Nurmuhammet Abdyllaev",
+    name: "Nurmuhammet",
     photoUrl: photo_4,
     description:
       "    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit tempore omnis nemo alias autem eos ullam beatae. Dolore sequi molestias sunt doloremque maxime magni impedit debitis, sint nobis culpa esse similique, ullam animi omnis voluptatibus ducimus blanditiis! Incidunt dolorum, numquam voluptatibus esse atque similique fugiat magni velit, vero ullam beatae?",
@@ -65,7 +65,7 @@ export const TeachersContextProvider = ({ children }) => {
   },
   {
     id: 7,
-    name: "Nazima",
+    name: "Emilbek",
     photoUrl: photo_7,
     description:
       "    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit tempore omnis nemo alias autem eos ullam beatae. Dolore sequi molestias sunt doloremque maxime magni impedit debitis, sint nobis culpa esse similique, ullam animi omnis voluptatibus ducimus blanditiis! Incidunt dolorum, numquam voluptatibus esse atque similique fugiat magni velit, vero ullam beatae?",
