@@ -8,7 +8,7 @@ function TestComponent() {
     // const commentsInDB = ref(database, "teachers/teacher_2/comments")
     onValue(teachersInDB, (snapshot) => {
       const data = snapshot.val()
-      console.log(snapshot.val())
+    //   console.log(snapshot.val())
     //   console.log(data)
     //   console.log(Object.entries(data))
     })

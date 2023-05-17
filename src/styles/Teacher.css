@@ -50,6 +50,23 @@
   color: #f39c12;
 }
 
+#submitComment {
+  padding: 5px 10px;
+  font-size: 15px;
+  background: #007bff;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 1em;
+  transition: all .2s ease-in;
+}
+#submitComment:hover {
+  background: #016ada;
+}
+
 @media screen and (max-width: 767px) {
   .teacher {
     flex-direction: column;
