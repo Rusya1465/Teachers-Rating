@@ -8,10 +8,6 @@ import photo_6 from "../assets/teachers/ruslan.jpeg";
 import photo_7 from "../assets/teachers/emilbek.jpeg";
 import photo_8 from "../assets/teachers/murray.jpeg";
 
-let initialTeachers = [
-
-];
-
 export const TeachersContext = createContext();
 
 export const TeachersContextProvider = ({ children }) => {
