@@ -3,7 +3,6 @@ import '../styles/HomePage.css'
 import wback_1 from '../assets/welcomeBack-1.svg'
 import wback_2 from '../assets/welcomeBack-2.svg'
 import wback_3 from '../assets/welcomeBack-3.svg'
-import TestComponent from '../Components/TestComponent';
 
 
 function HomePage() {
@@ -33,7 +32,6 @@ function HomePage() {
                     </div>
                 </div>
             </div>
-            <TestComponent/>
         </>
     );
 }

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { TeachersContext } from "../Context/TeachersContext";
 import "../styles/Teacher.css";
 import { database } from "../firebase";
-import { push, ref } from "firebase/database";
+import { onValue, push, ref } from "firebase/database";
 
 function Teacher() {
   const { id } = useParams();
@@ -21,13 +21,31 @@ function Teacher() {
   const commentsInDB = ref(database, `teachers/teacher_${teacher.id}/comments`)
 
   function handleCommentChange(event) {
-    setCommentInput(event.target.value)
+      setCommentInput(event.target.value)
   }
 
   function handleSubmit(event) {
     event.preventDefault()
-    push(commentsInDB, commentInput)
+    if (commentInput != "") {
+      push(commentsInDB, commentInput)
+    } else {
+      alert("Please write valid review")
+    }
+    setCommentInput("")
   }
+
+  let commentsArray = [""];
+
+  onValue(commentsInDB, (snapshot) => {
+    if (snapshot.exists()) {
+      let itemsArray = Object.entries(snapshot.val())
+      commentsArray = itemsArray.map(array => {
+        return <li key={array[0]}>{array[1]} <span>{array[0]}</span></li>
+      })
+    } else {
+      console.log("Snapshot does not exist")
+    }
+  })
 
 
   return (
@@ -45,11 +63,15 @@ function Teacher() {
           <span className="teacher__rating-value">{teacher.rating}</span>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ "width": "100%", "marginTop": "1em" }}>
         <label htmlFor="comment" style={{ "marginRight": "1em" }}>Leave a comment:</label>
-        <input type="text" style={{ "width": "20em" }} name="comment" value={commentInput} onChange={handleCommentChange} />
+        <input type="text" style={{ "width": "20em" }} name="comment" value={commentInput} onChange={handleCommentChange} id="input-field" />
         <button type="submit" id="submitComment">Submit</button>
       </form>
+      <div className="teacher__reviews">
+        <span className="teacher__reviews-text">Reviews:</span>
+        <ul id="teacher__reviews">{commentsArray}</ul>
+      </div>
     </div>
   );
 }
