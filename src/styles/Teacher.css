@@ -50,6 +50,55 @@
   color: #f39c12;
 }
 
+#submitComment {
+  padding: 5px 10px;
+  font-size: 15px;
+  background: #007bff;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 1em;
+  transition: all .2s ease-in;
+}
+#submitComment:hover {
+  background: #016ada;
+}
+
+.teacher__reviews {
+  width: 100%;
+}
+
+#teacher__reviews {
+  list-style: none;
+}
+
+#teacher__reviews li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: .6em;
+  margin: .6em 0;
+  box-shadow: 0 5px 8px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  font-size: 1.25em;
+}
+
+#teacher__reviews li span {
+  font-size: .7em;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.704);
+}
+
+.teacher__reviews-text {
+  display: flex;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
 @media screen and (max-width: 767px) {
   .teacher {
     flex-direction: column;
@@ -75,6 +124,10 @@
 
   .teacher__rating {
     font-size: 1rem;
+  }
+
+  #teacher__reviews li {
+    font-size: 1em;
   }
 }
 
