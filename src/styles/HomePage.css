@@ -4,6 +4,7 @@
     url("../assets/main-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 50px;
   height: 80vh;
 }
@@ -17,10 +18,10 @@
 .main--heading {
   color: aliceblue;
   font-size: 7em;
-  border-right: 4px solid #000;
+  /* border-right: 4px solid #000;
   animation: cursor 1s infinite step-end, typing 15s infinite steps(16);
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden; */
 }
 @keyframes typing {
   0% {
@@ -76,6 +77,24 @@
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .main--heading {
+    font-size: 5em;
+  }
+  .main {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main--heading {
+    font-size: 4em;
+  }
+  .main {
+    height: 50vh;
+  }
+}
+
 @media screen and (max-width: 415px) {
   .welcomeBack--con-heading {
     font-size: 1.2rem;
@@ -84,5 +103,8 @@
 @media screen and (max-width: 330px) {
   .welcomeBack--con-heading {
     font-size: 1.1rem;
+  }
+  .main--heading {
+    font-size: 3.5em;
   }
 }

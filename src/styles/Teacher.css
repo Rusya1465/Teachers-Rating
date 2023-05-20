@@ -99,6 +99,21 @@
   margin-bottom: .5em;
 }
 
+#input-field {
+  width: 22em;
+}
+
+@media screen and (max-width: 379px) {
+  #input-field {
+    margin-top: .7em;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  #submitComment {
+    margin-left: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .teacher {
     flex-direction: column;
@@ -106,7 +121,7 @@
   }
 
   .teacher__image {
-    width: 100%;
+    width: 70%;
     margin-right: 0;
     margin-bottom: 1rem;
   }
@@ -129,9 +144,6 @@
   #teacher__reviews li {
     font-size: 1em;
   }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
   .teacher__description {
     font-size: 1rem;
     line-height: 1.5;

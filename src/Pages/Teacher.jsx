@@ -65,7 +65,7 @@ function Teacher() {
       </div>
       <form onSubmit={handleSubmit} style={{ "width": "100%", "marginTop": "1em" }}>
         <label htmlFor="comment" style={{ "marginRight": "1em" }}>Leave a comment:</label>
-        <input type="text" style={{ "width": "20em" }} name="comment" value={commentInput} onChange={handleCommentChange} id="input-field" />
+        <input type="text" name="comment" value={commentInput} onChange={handleCommentChange} id="input-field" />
         <button type="submit" id="submitComment">Submit</button>
       </form>
       <div className="teacher__reviews">
