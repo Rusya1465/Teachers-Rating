@@ -103,7 +103,7 @@
   width: 22em;
 }
 
-@media screen and (max-width: 379px) {
+@media screen and (max-width: 408px) {
   #input-field {
     margin-top: .7em;
     margin-bottom: 1em;
@@ -111,6 +111,13 @@
   }
   #submitComment {
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 554px ) {
+  #submitComment {
+    margin-left: 0;
+    margin-top: 1em;
   }
 }
 
