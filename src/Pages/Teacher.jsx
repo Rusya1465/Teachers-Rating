@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { TeachersContext } from "../Context/TeachersContext";
 import "../styles/Teacher.css";
@@ -34,18 +34,20 @@ function Teacher() {
     setCommentInput("")
   }
 
-  let commentsArray = [""];
+  const [commentsArray, setCommentsArray] = useState([''])
 
-  onValue(commentsInDB, (snapshot) => {
-    if (snapshot.exists()) {
-      let itemsArray = Object.entries(snapshot.val())
-      commentsArray = itemsArray.map(array => {
-        return <li key={array[0]}>{array[1]} <span>{array[0]}</span></li>
-      })
-    } else {
-      console.log("Snapshot does not exist")
-    }
-  })
+  useEffect(() => {
+    onValue(commentsInDB, (snapshot) => {
+      if (snapshot.exists()) {
+        let itemsArray = Object.entries(snapshot.val())
+        setCommentsArray(itemsArray.map(array => {
+          return <li key={array[0]}>{array[1]} <span>{array[0]}</span></li>
+        }))
+      } else {
+        console.log("Snapshot does not exist")
+      }
+    })
+  }, [])
 
 
   return (
