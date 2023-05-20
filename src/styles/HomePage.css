@@ -6,7 +6,27 @@
   background-size: cover;
   background-position: center;
   padding: 50px;
-  height: 80vh;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.main--rate-btn {
+  position: absolute;
+  display: block;
+  bottom: 50px;
+  border: none;
+  cursor: pointer;
+  padding: .7em .9em;
+  border-radius: 1em;
+  background-color: #fff;
+  color: #000;
+  font-family: 'Nunito', sans-serif;;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-decoration: none;
+
 }
 .welcomeBack {
   display: flex;
@@ -51,7 +71,8 @@
 }
 
 .welcomeBack--heading {
-  margin: 3rem 0;
+  margin: 4rem 0 5rem 0;
+  font-size: 3em;
 }
 
 .welcomeBack--images-wrapper {
@@ -81,9 +102,6 @@
   .main--heading {
     font-size: 5em;
   }
-  .main {
-    height: 60vh;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -93,11 +111,24 @@
   .main {
     height: 50vh;
   }
+  .main--rate-btn {
+    font-size: 1.5rem;
+  }
+  .welcomeBack--heading {
+    font-size: 2em;
+    margin: 2rem 0;
+  }
 }
 
 @media screen and (max-width: 415px) {
   .welcomeBack--con-heading {
     font-size: 1.2rem;
+  }
+  .main--rate-btn {
+    font-size: 1.3rem;
+  }
+  .welcomeBack--heading {
+    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 330px) {
